@@ -1,0 +1,33 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "maska": "^3.0.0",
+    "nuxt": "^3.12.3",
+    "nuxt-svgo": "^4.0.2",
+    "pinia": "^2.1.7",
+    "vue": "latest",
+    "vue-yandex-maps": "^2.1.4"
+  },
+  "overrides": {
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "eslint": "^9.9.1",
+    "eslint-plugin-vue": "^9.27.0",
+    "sass": "^1.77.8",
+    "sass-loader": "^10.5.2",
+    "typescript-eslint": "^8.3.0"
+  }
+}

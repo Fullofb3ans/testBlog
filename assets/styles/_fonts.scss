@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    src: local("SFProText");
+    font-display: swap;
+}
+
+$font-weights: (
+    300: "Light",
+    400: "Regular",
+    500: "Medium",
+    600: "SemiBold",
+    700: "Bold",
+    800: "ExtraBold",
+);
+
+@each $weight, $style in $font-weights {
+    @font-face {
+        font-family: "SF Pro Text";
+        font-style: normal;
+        font-weight: $weight;
+        src: url("~/assets/fonts/SFProText-#{$style}.ttf") format("woff2");
+    }
+}

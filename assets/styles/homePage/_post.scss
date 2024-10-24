@@ -1,0 +1,181 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__container {
+        margin: 0 auto;
+        max-width: 676px;
+    }
+
+    &__description {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        letter-spacing: -0.05em;
+        color: var(--text);
+        margin-top: 16px;
+    }
+
+    &__reaction {
+        &__container {
+            display: flex;
+            flex-direction: row;
+            gap: 1px;
+        }
+
+        &__wrapper {
+            padding: 8px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: rgba(4, 4, 5, 0.04);
+            cursor: pointer;
+
+            &__likes {
+                border-radius: 30px 0 0 30px;
+
+                &--active {
+                    background: #ff3b30;
+
+                    &>.post__reaction__text {
+                        color: rgba(255, 255, 255, 0.95);
+                    }
+
+                    &>.post__reaction__number {
+                        color: rgba(255, 255, 255, 0.95);
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+            &__dislikes {
+                border-radius: 0 30px 30px 0;
+
+                &--active {
+                    background: #040405;
+
+                    &>.post__reaction__text {
+                        color: rgba(255, 255, 255, 0.95);
+                    }
+
+                    &>.post__reaction__number {
+                        color: rgba(255, 255, 255, 0.95);
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+
+        &__icon {
+            margin-right: 4px;
+
+            &>svg {
+                width: 13px;
+                height: 11px;
+            }
+        }
+
+        &__text {
+            margin-right: 6px;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            color: #040405;
+
+
+        }
+
+        &__number {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            text-align: right;
+            color: #040405;
+            opacity: 0.3;
+        }
+
+    }
+
+    &__open-comments__button {
+        border-bottom: 0.50px solid rgba(255, 107, 0, 0.3);
+        cursor: pointer;
+
+        @include sm {
+            order: 2;
+        }
+
+        &__text {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: -0.01em;
+            color: #ff6b00;
+        }
+
+    }
+
+    &__date {
+        &__text {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: -0.01em;
+            color: rgba(4, 4, 5, 0.22);
+        }
+    }
+
+    &__tags__group {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+
+        &__tag {
+            padding: 4px 4px 4px 4px;
+            background: rgba(120, 120, 128, 0.08);
+            border-radius: 3px;
+
+
+            &:first-child {
+                position: relative;
+                padding-left: 12px; // Добавляем отступ слева для треугольника
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 0;
+                    height: 0;
+                    border-top: 11px solid transparent;
+                    border-bottom: 11px solid transparent;
+                    border-right: 12px solid rgba(120, 120, 128, 0.08);
+                    background: white;
+                    height: 100%;
+                }
+            }
+
+            &__text {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 14px;
+                letter-spacing: -0.01em;
+                color: #040405;
+            }
+        }
+    }
+
+    &__group-buttons {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+
+        @include sm {
+            flex-wrap: wrap;
+        }
+    }
+}

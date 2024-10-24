@@ -1,0 +1,8 @@
+@import "/assets/styles/homePage/post";
+@import "/assets/styles/homePage/commentaries";
+
+.blog__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}

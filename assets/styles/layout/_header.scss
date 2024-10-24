@@ -1,0 +1,13 @@
+.header {
+    margin-top: 16px;
+    text-align: center;
+    padding-bottom: 48px;
+
+    &__title {
+        font-family: var(--third-family);
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 30%;
+        color: var(--accent-primary);
+    }
+}

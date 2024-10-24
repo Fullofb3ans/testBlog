@@ -1,0 +1,28 @@
+@import '/assets/styles/mixins/mixins';
+@import '/assets/styles/homePage/homePage';
+@import '/assets/styles/layout/header';
+@import '/assets/styles/common/common';
+
+* ::before,
+*::after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+main {
+    margin-bottom: 60px;
+}
+
+.hidden {
+    display: none !important;
+}
